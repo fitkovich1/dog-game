@@ -3,6 +3,8 @@ import './App.css';
 import Dog from "./Dog";
 import Counter from "./Counter";
 import dogAudio from './image/dogWhining.mp3';
+import {connect} from "react-redux";
+import {incrementCount, setPosition} from "./reducer";
 
 class App extends React.Component {
     constructor() {
@@ -10,86 +12,43 @@ class App extends React.Component {
         this.dogAudioRef = React.createRef();
     }
 
-    state = {
-        dogs: [
-            {id: 0, isHidden: false},
-            {id: 1, isHidden: false},
-            {id: 2, isHidden: false},
-            {id: 3, isHidden: false},
-            {id: 4, isHidden: false},
-            {id: 5, isHidden: false},
-            {id: 6, isHidden: false},
-            {id: 7, isHidden: false},
-            {id: 8, isHidden: false}
-        ],
-        count: 0,
-        randomImageId: 0,
-        showGame: true
-    };
-
     componentDidMount() {
-        setInterval(
-            () => {
-                this.setState(
-                    {dogs: this.getRandomImageId()}
-                )
-            }, 700);
+        setInterval(this.setNewPositionOfImage, 700);
     }
 
-    getRandomImageId = () => {
-        let randomImageId = Math.floor(Math.random() * 9);
-        let newDogs = this.state.dogs.map(el => {
-            if (el.id === randomImageId) {
-                return {...el, isHidden: true}
-            } else {
-                return {...el, isHidden: false}
-            }
-        });
-        return newDogs;
+    setNewPositionOfImage = () => {
+        this.props.setPosition();
     };
 
     onImageHandleClick = () => {
         this.dogAudioRef.current.currentTime = 0;
         this.dogAudioRef.current.play();
-        this.setState({
-            count: this.state.count + 1
-        }, () => {
-            if (this.state.count === 10) {
-                this.setState({
-                    showGame: true,
-                    count: this.state.count = 0
-
-                });
-                return alert('Congratulations, you are Win!!!!');
-            }
-        })
-    };
-    onStartHandleClick = () => {
-        this.setState({
-            showGame: false
-        })
+        this.props.incrementCount();
     };
 
     render() {
-        let dogsElement = this.state.dogs.map(el => <Dog id={el.id} isHidden={el.isHidden}
+        let dogsElement = this.props.dogs.map(d => <Dog id={d.id} isHidden={d.isHidden}
                                                          onImageHandleClick={this.onImageHandleClick}/>);
         return (
             <div className="wrapper">
                 <audio src={dogAudio} ref={this.dogAudioRef}></audio>
-                {
-                    this.state.showGame ?
-                        <div className="button">
-                            <button onClick={this.onStartHandleClick}>Start Game</button>
-                        </div>
-                        :
-                        <div className="wrapper">
-                            {dogsElement}
-                            <Counter count={this.state.count}/>
-                        </div>
-                }
+                <div className="wrapper">
+                    {dogsElement}
+                    <Counter count={this.props.count}/>
+                </div>
             </div>
         );
     }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        dogs: state.dogs,
+        count: state.count
+    };
+};
+
+
+const ConnectedApp = connect(mapStateToProps, {incrementCount,setPosition})(App);
+
+export default ConnectedApp;
