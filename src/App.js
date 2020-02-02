@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Dog from "./Dog";
 import Counter from "./Counter";
-import dogAudio from './image/dogWhining.mp3';
+import dogAudio from './image/zloy.mp3';
 import {connect} from "react-redux";
 import {incrementCount, setPosition} from "./reducer";
 
@@ -13,7 +13,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        setInterval(this.setNewPositionOfImage, 700);
+        setInterval(this.setNewPositionOfImage, 600);
     }
 
     setNewPositionOfImage = () => {
@@ -28,9 +28,9 @@ class App extends React.Component {
 
     render() {
         let dogsElement = this.props.dogs.map(d => <Dog id={d.id} isHidden={d.isHidden}
-                                                         onImageHandleClick={this.onImageHandleClick}/>);
+                                                        onImageHandleClick={this.onImageHandleClick}/>);
         return (
-            <div className="wrapper">
+            <div className="container">
                 <audio src={dogAudio} ref={this.dogAudioRef}></audio>
                 <div className="wrapper">
                     {dogsElement}

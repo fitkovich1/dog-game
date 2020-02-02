@@ -1,5 +1,5 @@
 import React from 'react';
-import image from './image/dog.jpg';
+import image from './image/panda.jpg';
 
 import './App.css';
 

@@ -1,28 +1,37 @@
+.container {
+    background: url("https://regnum.ru/uploads/pictures/news/2019/10/09/regnum_picture_1570635980236267_normal.jpg");
+    height: 100vh;
+}
+
 .counter {
-  text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 1500px;
+    font-size: 300px;
+    color: red;
 }
 
 .wrapper {
-  width: 170px;
-  margin: 300px auto 20px auto;
+    width: 700px;
 }
 
 .item {
-  border: 1px solid grey;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  overflow: hidden;
-  display: inline-block;
+    border: 1px solid aquamarine;
+    border-radius: 50%;
+    background-color: rgba(0, 175, 175, 0.66);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
 }
 
 .photo {
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
 }
 
 .show {
-   visibility: visible;
- }
+    visibility: visible;
+}
