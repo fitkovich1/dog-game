@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/dog-game/static/css/main.780d19e6.chunk.css",
-    "main.js": "/dog-game/static/js/main.2d92ccf3.chunk.js",
-    "main.js.map": "/dog-game/static/js/main.2d92ccf3.chunk.js.map",
+    "main.css": "/dog-game/static/css/main.9dec7657.chunk.css",
+    "main.js": "/dog-game/static/js/main.af66e1f6.chunk.js",
+    "main.js.map": "/dog-game/static/js/main.af66e1f6.chunk.js.map",
     "runtime-main.js": "/dog-game/static/js/runtime-main.99fa29cf.js",
     "runtime-main.js.map": "/dog-game/static/js/runtime-main.99fa29cf.js.map",
-    "static/js/2.4e48e909.chunk.js": "/dog-game/static/js/2.4e48e909.chunk.js",
-    "static/js/2.4e48e909.chunk.js.map": "/dog-game/static/js/2.4e48e909.chunk.js.map",
+    "static/js/2.004484d7.chunk.js": "/dog-game/static/js/2.004484d7.chunk.js",
+    "static/js/2.004484d7.chunk.js.map": "/dog-game/static/js/2.004484d7.chunk.js.map",
     "index.html": "/dog-game/index.html",
-    "precache-manifest.c2c200a6175859499c8cdbd22d607c20.js": "/dog-game/precache-manifest.c2c200a6175859499c8cdbd22d607c20.js",
+    "precache-manifest.56abb4e5e5f0374c7ba8cf6ffcd0f253.js": "/dog-game/precache-manifest.56abb4e5e5f0374c7ba8cf6ffcd0f253.js",
     "service-worker.js": "/dog-game/service-worker.js",
-    "static/css/main.780d19e6.chunk.css.map": "/dog-game/static/css/main.780d19e6.chunk.css.map",
-    "static/media/dogWhining.mp3": "/dog-game/static/media/dogWhining.a61c9615.mp3"
+    "static/css/main.9dec7657.chunk.css.map": "/dog-game/static/css/main.9dec7657.chunk.css.map",
+    "static/media/panda.jpg": "/dog-game/static/media/panda.69c585c3.jpg",
+    "static/media/zloy.mp3": "/dog-game/static/media/zloy.c5f38d33.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.99fa29cf.js",
-    "static/js/2.4e48e909.chunk.js",
-    "static/css/main.780d19e6.chunk.css",
-    "static/js/main.2d92ccf3.chunk.js"
+    "static/js/2.004484d7.chunk.js",
+    "static/css/main.9dec7657.chunk.css",
+    "static/js/main.af66e1f6.chunk.js"
   ]
 }
