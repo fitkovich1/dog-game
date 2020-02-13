@@ -5,14 +5,20 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
+    padding: 100px 200px 100px 200px;
+}
+.container h1{
+    text-align: center;
+    width: 720px;
 }
 
 .counter {
     display: flex;
-    align-items: center;
+    justify-content: center;
     font-size: 100px;
+    width: 720px;
     color: #282525;
 }
 

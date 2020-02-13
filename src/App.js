@@ -13,7 +13,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        setInterval(this.setNewPositionOfImage, 550);
+        setInterval(this.setNewPositionOfImage, 570);
     }
 
     setNewPositionOfImage = () => {
@@ -31,7 +31,7 @@ class App extends React.Component {
                                                         onImageHandleClick={this.onImageHandleClick}/>);
         return (
             <div className="container">
-                <h1>Click to Joker</h1>
+                <h1 className="title">Click to Joker</h1>
                 <audio src={dogAudio} ref={this.dogAudioRef}></audio>
                 <div className="wrapper">
                     {dogsElement}
