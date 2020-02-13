@@ -13,7 +13,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        setInterval(this.setNewPositionOfImage, 600);
+        setInterval(this.setNewPositionOfImage, 550);
     }
 
     setNewPositionOfImage = () => {
@@ -31,11 +31,12 @@ class App extends React.Component {
                                                         onImageHandleClick={this.onImageHandleClick}/>);
         return (
             <div className="container">
+                <h1>Click to Joker</h1>
                 <audio src={dogAudio} ref={this.dogAudioRef}></audio>
                 <div className="wrapper">
                     {dogsElement}
-                    <Counter count={this.props.count}/>
                 </div>
+                <Counter count={this.props.count}/>
             </div>
         );
     }

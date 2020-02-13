@@ -1,24 +1,32 @@
 .container {
-    background: url("https://regnum.ru/uploads/pictures/news/2019/10/09/regnum_picture_1570635980236267_normal.jpg");
+    background: url("https://wpapers.ru/wallpapers/games/other-games/10134/1920x1080_The-Joker-(Batman:-Arkham-City).jpg");
+    background-size: cover;
+    box-sizing: border-box;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .counter {
     display: flex;
-    justify-content: flex-end;
-    width: 1500px;
-    font-size: 300px;
-    color: red;
+    align-items: center;
+    font-size: 100px;
+    color: #282525;
 }
 
 .wrapper {
-    width: 700px;
+    display: grid;
+    grid-template-rows: 120px 120px 120px 120px 120px;
+    grid-template-columns: 120px 120px 120px 120px 120px 120px;
+    justify-items: center;
+    align-items: center;
 }
 
 .item {
-    border: 1px solid aquamarine;
     border-radius: 50%;
-    background-color: rgba(0, 175, 175, 0.66);
+    background-color: rgba(2, 172, 0, 0.58);
     width: 100px;
     height: 100px;
     text-align: center;
